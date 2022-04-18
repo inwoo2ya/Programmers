@@ -4,7 +4,7 @@ def solution(left, right):
         nu = 0
         for i in range(1,n+1):
             if n%i == 0 :
-                nu+=1
+                nu += 1
 
         if nu%2 ==0 :
             answer += n
