@@ -1,0 +1,18 @@
+def solution(array, commands):
+    pulledarray =[]
+    answer = []
+    for n in range(len(commands)):
+        i = commands[n][0]
+        j = commands[n][1]
+        k = commands[n][2]
+        
+        for m in range(i-1,j):
+            pulledarray.append(array[m])
+        pulledarray.sort()
+        answer.append(pulledarray[k-1])
+        pulledarray = []
+    return answer
+    
+    # 다른 사람 풀이
+    # def solution(array, commands):
+    # return list(map(lambda x:sorted(array[x[0]-1:x[1]])[x[2]-1], commands))
